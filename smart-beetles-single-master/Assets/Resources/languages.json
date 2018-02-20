@@ -1,0 +1,106 @@
+﻿{
+	"settings-user": {
+		"en": "user",
+		"sp": "usuario"
+	},
+	"settings-sound": {
+		"en": "sound",
+		"sp": "sonido"
+	},
+	"settings-controls": {
+		"en": "controls",
+		"sp": "controles"
+	},
+	"settings-language": {
+		"en": "language",
+		"sp": "idioma"
+	},
+	"settings-credits": {
+		"en": "credits",
+		"sp": "créditos"
+	},
+	"settings-language-spanish": {
+		"en": "spanish",
+		"sp": "español"
+	},
+	"settings-language-english": {
+		"en": "english",
+		"sp": "inglés"
+	},
+	"settings-saving-username": {
+		"en": "Saving username...",
+		"sp": "Guardando nombre de usuario..."
+	},
+	"settings-username-saved": {
+		"en": "Saved!",
+		"sp": "¡Guardado!"
+	},
+	"settings-credits-content": {
+		"en": "This Game has been developed by Pixelder.\nInformation about the team can be found in www.pixelder.com.\n\nMaps and info about the streets have been extracted from OSM: \n© OpenStreetMap contributors.\nMap vector designed by Freepik: http://www.freepik.com",
+		"sp": "Este Juego ha sido desarrollado por Pixelder.\nLa información sobre el equipo se encuentra en www.pixelder.com.\n\nLos mapas y la información sobre las calles ha sido extraida de OSM: \n© OpenStreetMap contributors\nmapa Vectorial diseñado por Freepik: http://www.freepik.com"
+	},
+	"gameui-quitscreen": {
+		"en": "Do you really want to quit?",
+		"sp": "¿Realmente desea salir?"
+	},
+	"gameui-quitscreen-yes": {
+		"en": "Yes",
+		"sp": "Si"
+	},
+	"gameui-quitscreen-no": {
+		"en": "No",
+		"sp": "No"
+	},
+	"gameui-waitscreen-connect": {
+		"en": "Connecting...",
+		"sp": "Conectando..."
+	},
+	"gameui-quitscreen-creatingroom": {
+		"en": "Creating room...",
+		"sp": "Creando sala..."
+	},
+	"you-win-title": {
+		"en": "YOU WIN",
+		"sp": "¡HAS GANADO!"
+	},
+  "game-over-text-win": {
+    "en": "Congratulations, you've cleaned the whole city.\nPoints:",
+    "sp": "Enhorabuena, has limpiado toda la ciudad.\nPuntos:"
+  },
+  "you-lose-title": {
+		"en": "YOU LOST!",
+		"sp": "¡HAS PERDIDO!"
+	},
+  "game-over-text-lose": {
+    "en": "You have not cleaned up the city.",
+    "sp": "No has conseguido limpiar la ciudad."
+  },
+  "sublevel-available-soon": {
+    "en": "Available Soon", 
+    "sp": "Disponible Pronto"
+  },
+  "sublevel-info-checkpoint-1": {
+    "en": "1. Visit the most emblematic areas of the city and collect all waste to complete the mission.", 
+    "sp": "1. Visita las zonas más emblemáticas de la ciudad y recoge todos los residuos para completar la misión."
+  },
+  "sublevel-info-checkpoint-2": {
+    "en": "2. Caution! if you are not the fastest in picking up trash others may take it.", 
+    "sp": "2. Cuidado! si no eres el más rápido en recoger la basura otros podrán llevársela."
+  },
+  "sublevel-info-checkpoint-3": {
+    "en": "3. Avoid crashing with humans and beetles.", 
+    "sp": "3. Evita chocarte con humanos y escarabajos."
+  },
+  "BestScoresText": {
+    "en": "High Scores",
+    "sp": "Mejores Resultados"
+  },
+  "LevelName": {
+    "en": "Level:", 
+    "sp": "Nivel:"
+  },
+  "SubLevelName": {
+    "en": "SubLevel:", 
+    "sp": "SubNivel:"
+  }
+}

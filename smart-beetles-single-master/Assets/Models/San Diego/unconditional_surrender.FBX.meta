@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 4b637d369a7469b47b248b7177258224
+timeCreated: 1465899847
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box003
+    100006: Cuerpo marinero
+    100008: Enfermera
+    100010: Gorro
+    100012: Marinero
+    100014: Pelo
+    100016: Piernas
+    100018: Plataforma
+    100020: TPhotometricLight001
+    100022: TPhotometricLight001.Target
+    100024: //RootNode
+    100026: Vestido
+    100028: Zapatos
+    400000: Box001
+    400002: Box002
+    400004: Box003
+    400006: Cuerpo marinero
+    400008: Enfermera
+    400010: Gorro
+    400012: Marinero
+    400014: Pelo
+    400016: Piernas
+    400018: Plataforma
+    400020: TPhotometricLight001
+    400022: TPhotometricLight001.Target
+    400024: //RootNode
+    400026: Vestido
+    400028: Zapatos
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Cuerpo marinero
+    2300008: Enfermera
+    2300010: Gorro
+    2300012: Marinero
+    2300014: Pelo
+    2300016: Piernas
+    2300018: Plataforma
+    2300020: Vestido
+    2300022: Zapatos
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Cuerpo marinero
+    3300008: Enfermera
+    3300010: Gorro
+    3300012: Marinero
+    3300014: Pelo
+    3300016: Piernas
+    3300018: Plataforma
+    3300020: Vestido
+    3300022: Zapatos
+    4300000: Plataforma
+    4300002: Piernas
+    4300004: Zapatos
+    4300006: Vestido
+    4300008: Cuerpo marinero
+    4300010: Marinero
+    4300012: Gorro
+    4300014: Enfermera
+    4300016: Pelo
+    4300018: Box001
+    4300020: Box002
+    4300022: Box003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
