@@ -344,11 +344,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _zoom: 16
   _initializeOnStart: 1
-  _latitudeLongitudeString: 32.7174, -117.1628
+  _latitudeLongitudeString: 40.7648, -73.9808
   _root: {fileID: 0}
   _tileProvider: {fileID: 1055311359}
   _mapVisualizer: {fileID: 11400000, guid: a27c9496398804650a378dbe73297a93, type: 2}
-  _unityTileSize: 100
+  _unityTileSize: 1
   _snapMapHeightToZero: 1
 --- !u!4 &1055311361
 Transform:
