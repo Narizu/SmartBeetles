@@ -7,31 +7,34 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainScreen.unity
-    guid: 00000000000000000000000000000000
+    guid: 7ded790ea7940c34ab720d0a08be3cec
   - enabled: 1
     path: Assets/Scenes/LevelSelection.unity
-    guid: 00000000000000000000000000000000
+    guid: 0c44082597626cd4d96661eaf70f2c68
   - enabled: 0
     path: Assets/Scenes/GameModeSelection.unity
-    guid: 00000000000000000000000000000000
+    guid: 13e98a30038ea95459cf00b6f190d734
   - enabled: 1
     path: Assets/Scenes/Ranking.unity
+    guid: 791ad7ebfb668b14aa314e88859fcccd
+  - enabled: 0
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Levels/SanDiego/SanDiegoCheckpoints.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/MultiplayerScreen.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/PlayersLobby.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SubLevelSelection.unity
-    guid: 00000000000000000000000000000000
+    guid: b4e5872013a031b41bdee58ea64543b0
   - enabled: 1
     path: Assets/Scenes/SanDiego_CheckPoints.unity
-    guid: 00000000000000000000000000000000
+    guid: 3757c748a9cd2e842ade91cfb917ef97
+  - enabled: 1
+    path: Assets/Scenes/SanDiego_Bike.unity
+    guid: 7a8e17f3cd5ad499ab88cadf9e345a57
   - enabled: 1
     path: Assets/Scenes/Settings.unity
-    guid: 00000000000000000000000000000000
+    guid: f41d3912f8228f542891a7b310c3eac8
