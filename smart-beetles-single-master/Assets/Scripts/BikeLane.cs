@@ -17,7 +17,7 @@ public class BikeLane : MonoBehaviour
 
 		runImage.enabled = false;
 		maxSpeed = 2f;
-		maxSpeedBike = 3f;
+		maxSpeedBike = BikeSettings.bikeSpeed;
 
 	}
 
@@ -27,8 +27,10 @@ public class BikeLane : MonoBehaviour
 		if (other.gameObject.tag == "Sphere")
 		{
 			
+			if (sphere == null)
+				sphere = other.gameObject.GetComponent<SphereControl> ();
+			
 			runImage.enabled = true;
-			sphere = other.gameObject.GetComponent<SphereControl>();
 			sphere.SetMaxSpeed(maxSpeedBike);
 
 		}
@@ -40,9 +42,11 @@ public class BikeLane : MonoBehaviour
 
 		if (other.gameObject.tag == "Sphere")
 		{
+
+			if (sphere == null)
+				sphere = other.gameObject.GetComponent<SphereControl> ();
 			
 			runImage.enabled = false;
-			sphere = other.gameObject.GetComponent<SphereControl>();
 			sphere.SetMaxSpeed(maxSpeed);
 
 		}
