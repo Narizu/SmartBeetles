@@ -1626,7 +1626,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &241400985
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1803,7 +1802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &271601210
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2490,7 +2488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &451690243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2810,7 +2807,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 561022227}
-  - component: {fileID: 561022228}
   m_Layer: 8
   m_Name: BikeLanes
   m_TagString: Untagged
@@ -2844,18 +2840,6 @@ Transform:
   m_Father: {fileID: 714174074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &561022228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561022226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c379867dc0b48461492236ab2bd7c4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bikeSpeed: 3
 --- !u!1 &565515563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,7 +4291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &745159869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4618,7 +4601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &809100930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4796,7 +4778,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &817050316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4977,7 +4958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -54.999817, y: -56.82715}
+  m_AnchoredPosition: {x: -54.999756, y: -56.82715}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &823457529
@@ -5594,7 +5575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &905337779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5825,7 +5805,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &928709603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6276,7 +6255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &972583536
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6644,7 +6622,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &1052351663
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6789,7 +6766,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &1108827760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7615,7 +7591,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &1305187121
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7937,7 +7912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runImage: {fileID: 1619267772}
-  maxSpeedBike: 3
 --- !u!23 &1338388307
 MeshRenderer:
   m_ObjectHideFlags: 0

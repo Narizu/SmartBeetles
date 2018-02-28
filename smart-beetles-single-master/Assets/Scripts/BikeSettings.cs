@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-
-public class BikeSettings : MonoBehaviour
+﻿
+public class BikeSettings
 {
 	
 	public static float bikeSpeed = 3f;
