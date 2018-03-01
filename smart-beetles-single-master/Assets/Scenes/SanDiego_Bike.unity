@@ -1625,7 +1625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &241400985
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1801,7 +1800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &271601210
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2487,7 +2485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &451690243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3874,6 +3871,7 @@ GameObject:
   - component: {fileID: 714174077}
   - component: {fileID: 714174076}
   - component: {fileID: 714174075}
+  - component: {fileID: 714174078}
   m_Layer: 8
   m_Name: Ground (Bike)
   m_TagString: Untagged
@@ -3948,6 +3946,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714174073}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &714174078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714174073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b32fae7f64c40d7a3c36518d53f423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runImage: {fileID: 1619267772}
 --- !u!1 &720329398
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,7 +4300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &745159869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4600,7 +4609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &809100930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4777,7 +4785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &817050316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4958,7 +4965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -54.999756, y: -56.82715}
+  m_AnchoredPosition: {x: -54.999695, y: -56.82715}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &823457529
@@ -5574,7 +5581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &905337779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5804,7 +5810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &928709603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6254,7 +6259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &972583536
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6621,7 +6625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &1052351663
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6765,7 +6768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &1108827760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7590,7 +7592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &1305187121
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7911,7 +7912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4c4da0b6c7d4534a967068f64db082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runImage: {fileID: 1619267772}
 --- !u!23 &1338388307
 MeshRenderer:
   m_ObjectHideFlags: 0

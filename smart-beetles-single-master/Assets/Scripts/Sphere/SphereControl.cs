@@ -101,7 +101,6 @@ public class SphereControl : MonoBehaviour {
         velocity += slopeVector * Time.deltaTime;
         sphereBody.velocity = velocity;
         //Camera.main.transform.parent.transform.eulerAngles = angle;
-		Debug.Log(maxSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -36,5 +36,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SanDiego_Bike.unity
     guid: 7a8e17f3cd5ad499ab88cadf9e345a57
   - enabled: 1
+    path: Assets/Scenes/SanDiego_Traffic.unity
+    guid: 4c77914c443454e7290ad2513099a1a9
+  - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: f41d3912f8228f542891a7b310c3eac8

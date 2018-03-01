@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class BikeLane : MonoBehaviour
 {
 
-	public RawImage runImage;
-
 	private SphereControl sphere;
 	private float maxSpeed;
 	private float maxSpeedBike;
+	private BikeRun bikeRun;
 
 	private void Start ()
 	{
 
-		runImage.enabled = false;
 		maxSpeed = 2f;
 		maxSpeedBike = BikeSettings.bikeSpeed;
+		bikeRun = GameObject.Find ("Ground (Bike)").GetComponent<BikeRun> ();
+		bikeRun.SetRunOff ();
 
 	}
 
@@ -30,7 +30,7 @@ public class BikeLane : MonoBehaviour
 			if (sphere == null)
 				sphere = other.gameObject.GetComponent<SphereControl> ();
 			
-			runImage.enabled = true;
+			bikeRun.SetRunOn ();
 			sphere.SetMaxSpeed(maxSpeedBike);
 
 		}
@@ -46,7 +46,7 @@ public class BikeLane : MonoBehaviour
 			if (sphere == null)
 				sphere = other.gameObject.GetComponent<SphereControl> ();
 			
-			runImage.enabled = false;
+			bikeRun.SetRunOff ();
 			sphere.SetMaxSpeed(maxSpeed);
 
 		}

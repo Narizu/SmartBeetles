@@ -9,12 +9,15 @@ public class TrafficOrange : MonoBehaviour
 	private SphereControl sphere;
 	private float maxSpeed;
 	private float maxSpeedTraffic;
+	private TrafficColor trafficColor;
 
-	void Start ()
+	private void Start ()
 	{
-		
+
 		maxSpeed = 2f;
 		maxSpeedTraffic = TrafficSettings.orangeSpeed;
+		trafficColor = GameObject.Find ("Ground (Traffic)").GetComponent<TrafficColor> ();
+		trafficColor.SetColorGreen ();
 
 	}
 
@@ -27,7 +30,7 @@ public class TrafficOrange : MonoBehaviour
 			if (sphere == null)
 				sphere = other.gameObject.GetComponent<SphereControl> ();
 
-			Debug.Log("Entro al Naranja");
+			trafficColor.SetColorOrange ();
 			sphere.SetMaxSpeed(maxSpeedTraffic);
 
 		}
@@ -43,7 +46,7 @@ public class TrafficOrange : MonoBehaviour
 			if (sphere == null)
 				sphere = other.gameObject.GetComponent<SphereControl> ();
 
-			Debug.Log("Salgo del Naranja");
+			trafficColor.SetColorGreen ();
 			sphere.SetMaxSpeed(maxSpeed);
 
 		}

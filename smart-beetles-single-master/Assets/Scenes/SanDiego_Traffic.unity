@@ -5873,6 +5873,7 @@ GameObject:
   - component: {fileID: 714174077}
   - component: {fileID: 714174076}
   - component: {fileID: 714174075}
+  - component: {fileID: 714174078}
   m_Layer: 8
   m_Name: Ground (Traffic)
   m_TagString: Untagged
@@ -5948,6 +5949,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714174073}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &714174078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714174073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52db07c165b3741dbbd33b2527b65c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenImage: {fileID: 1619267772}
+  orangeImage: {fileID: 1221642422}
+  redImage: {fileID: 985146525}
 --- !u!1 &718103294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6323,6 +6338,8 @@ RectTransform:
   - {fileID: 66491169}
   - {fileID: 1414616528}
   - {fileID: 1619267771}
+  - {fileID: 1221642421}
+  - {fileID: 985146524}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8798,6 +8815,73 @@ Transform:
   m_Father: {fileID: 1914547563}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &985146523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 985146524}
+  - component: {fileID: 985146526}
+  - component: {fileID: 985146525}
+  m_Layer: 5
+  m_Name: BugTrafficRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &985146524
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985146523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.0000143, y: 2.0000143, z: 1.0000072}
+  m_Children: []
+  m_Father: {fileID: 736095391}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.88745826, y: 0.010810346}
+  m_AnchorMax: {x: 0.990625, y: 0.1755431}
+  m_AnchoredPosition: {x: 2.999939, y: -1.5}
+  m_SizeDelta: {x: -98, y: -101}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &985146525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985146523}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: e93b340deb21e4c0c9c8e100ad8f08cc, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &985146526
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985146523}
 --- !u!1 &992406688
 GameObject:
   m_ObjectHideFlags: 0
@@ -9594,6 +9678,73 @@ Transform:
   m_Father: {fileID: 2136057952}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1221642420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1221642421}
+  - component: {fileID: 1221642423}
+  - component: {fileID: 1221642422}
+  m_Layer: 5
+  m_Name: BugTrafficOrange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1221642421
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221642420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.0000143, y: 2.0000143, z: 1.0000072}
+  m_Children: []
+  m_Father: {fileID: 736095391}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.88745826, y: 0.010810346}
+  m_AnchorMax: {x: 0.990625, y: 0.1755431}
+  m_AnchoredPosition: {x: 2.999939, y: -1.5}
+  m_SizeDelta: {x: -98, y: -101}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1221642422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221642420}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: fb2e65a25ae5940f38665b9bc5b3d6e1, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1221642423
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221642420}
 --- !u!1 &1223506073
 GameObject:
   m_ObjectHideFlags: 0
@@ -13690,7 +13841,7 @@ GameObject:
   - component: {fileID: 1619267773}
   - component: {fileID: 1619267772}
   m_Layer: 5
-  m_Name: Run
+  m_Name: BugTrafficGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13733,7 +13884,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: a1a6157042e4c4476979e3c06891548b, type: 3}
+  m_Texture: {fileID: 2800000, guid: ec527d0a5943b4a5096a402f79226f3b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

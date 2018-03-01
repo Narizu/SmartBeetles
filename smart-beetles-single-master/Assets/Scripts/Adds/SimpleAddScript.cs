@@ -7,14 +7,14 @@ public class SimpleAddScript : MonoBehaviour
     void Start()
     {
         //For Android
-        Advertisement.Initialize("1193195", false);
+        //Advertisement.Initialize("1193195", false);
 
         //For IOS
         //Advertisement.Initialize("1193194", false);
 
-        StartCoroutine(ShowAdWhenReady());
+        //StartCoroutine(ShowAdWhenReady());
     }
-
+	/*
     IEnumerator ShowAdWhenReady()
     {
         while (!Advertisement.IsReady())
@@ -22,7 +22,7 @@ public class SimpleAddScript : MonoBehaviour
             yield return null;
         }
         Advertisement.Show();
-    }
+    }*/
     //public void ShowAd()
     //{
     //    if (Advertisement.IsReady())
