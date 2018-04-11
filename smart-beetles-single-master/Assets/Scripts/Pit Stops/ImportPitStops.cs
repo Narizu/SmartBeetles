@@ -6,8 +6,26 @@ using System.IO;
 
 public class ImportPitStops : MonoBehaviour
 {
-	
+
+	public static ImportPitStops instance;
 	public PitStops pitStops;
+
+	void Awake ()
+	{
+
+		if (instance == null) {
+			
+			instance = this;
+
+		} else if (instance != this) {
+
+			Destroy (gameObject);
+
+		}
+
+		DontDestroyOnLoad (gameObject);
+
+	}
 
 	IEnumerator Start ()
 	{
@@ -56,6 +74,30 @@ public class ImportPitStops : MonoBehaviour
 
 		}
 
+		print (pitStops.features [0].geometry.x);
+
 	}
 
+	public string GetName (int i)
+	{
+
+		if (pitStops.features.Count > 0) {
+			
+			return pitStops.features [i].attributes.Name;
+
+		} else {
+
+			return "error";
+
+		}
+
+	}
+	/*
+	public Vector3 GetXY (int i)
+	{
+
+		return new Vector3 (float.Parse (pitStops.features [i].geometry.x), 0.0f, float.Parse (pitStops.features [i].geometry.y));
+
+	}
+*/
 }

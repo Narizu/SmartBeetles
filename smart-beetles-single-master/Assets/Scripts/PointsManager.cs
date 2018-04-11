@@ -6,24 +6,24 @@ using UnityEngine.UI;
 public class PointsManager : MonoBehaviour
 {
 
-
 	Text text;
+	Vector3 temp;
 
-
-	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 
 		text = GetComponent<Text> ();
-
-
-		text.text = "Pruebecilla";
-
-
+		temp = transform.position;
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Update ()
+	{
+
+		text.text = ImportPitStops.instance.GetName (0);
+		//temp = ImportPitStops.instance.GetXY (0);
+		//transform.position = temp;
+
 	}
+
 }
