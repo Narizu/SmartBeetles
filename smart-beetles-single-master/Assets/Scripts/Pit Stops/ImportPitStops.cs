@@ -74,8 +74,6 @@ public class ImportPitStops : MonoBehaviour
 
 		}
 
-		print (pitStops.features [0].geometry.x);
-
 	}
 
 	public string GetName (int i)
@@ -92,12 +90,22 @@ public class ImportPitStops : MonoBehaviour
 		}
 
 	}
-	/*
+
 	public Vector3 GetXY (int i)
 	{
 
-		return new Vector3 (float.Parse (pitStops.features [i].geometry.x), 0.0f, float.Parse (pitStops.features [i].geometry.y));
+		if (pitStops.features.Count > 0) {
+
+			float posX = (float)pitStops.features [i].geometry.x;
+			float posY = (float)pitStops.features [i].geometry.y;
+			return new Vector3 (posX, posY, 0);
+
+		} else {
+
+			return new Vector3 (0, 0, 0);
+
+		}
 
 	}
-*/
+
 }
