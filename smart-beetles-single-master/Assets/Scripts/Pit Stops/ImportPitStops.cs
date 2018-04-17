@@ -96,14 +96,59 @@ public class ImportPitStops : MonoBehaviour
 
 		if (pitStops.features.Count > 0) {
 
-			float posX = (float)pitStops.features [i].geometry.x;
-			float posY = (float)pitStops.features [i].geometry.y;
+			string stringX = (pitStops.features [i].geometry.x * 100).ToString ().Remove (0, 5);
+			string stringY = (pitStops.features [i].geometry.y * 100).ToString ().Remove (0, 3);
+
+			// A ver, los números que aparecen a continuación dan mucho miedo y parecen que sean
+			// números mágicos que están ahí para que el juego funcione, pero la verdad es que
+			// tienen su lógica y cálculo matemático hecho en papel (simplemente te lo tendrás
+			// que creer y no tocar nada si no quieres que se vaya todo a la m*****). El primer
+			// número (7.6686 en el caso de las X y 0.2487 en el de las Y) es como la coordenada
+			// (0, 0) en el mapa de ArcGIS (habiendo quitado los primeros dígitos, ya que son
+			// innecesarios para un mapa tan pequeño). Al restar este número con el obtenido
+			// justo antes de este párrafo que ya te estás cansando de leer se obtiene la distancia
+			// que hay desde el comienzo del mapa hasta el punto que queremos obtener. Después,
+			// se hace una regla de 3 con otros dos datos. El primero es el tamaño del mapa del
+			// juego, 400 en las X y 300 en las Y. El otro número que parece "mágico" (2.1072 en
+			// las X y 1.3379 en las Y) es el tamaño del mapa en ArcGIS (quitando otra vez los
+			// primeros dígitos). Al resultado de la regla de 3 se le resta la mitad del tamaño
+			// del mapa del juego (ya que el origen (0, 0) está en el centro) y se obtiene lo
+			// que viene siendo la posX y posY. Bueno, espero que se haya entendido, feliz día.
+
+			float posX = (7.6686f - float.Parse (stringX)) * 400 / 2.1072f - 200;
+			float posY = (float.Parse (stringY) - 0.2487f) * 300 / 1.3379f - 150;
+
 			return new Vector3 (posX, posY, 0);
 
 		} else {
 
 			return new Vector3 (0, 0, 0);
 
+		}
+
+	}
+
+	public int GetID (string s)
+	{
+
+		if (pitStops.features.Count > 0) {
+		
+			for (int i = 0; i < pitStops.features.Count; i++) {
+			
+				if (pitStops.features [i].attributes.Name == s) {
+				
+					return i;
+				
+				}
+			
+			}
+
+			return -1;
+		
+		} else {
+		
+			return -1;
+		
 		}
 
 	}
