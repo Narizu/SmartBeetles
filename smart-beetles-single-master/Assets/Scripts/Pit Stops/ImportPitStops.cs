@@ -10,7 +10,7 @@ public class ImportPitStops : MonoBehaviour
 	public static ImportPitStops instance;
 	public PitStops pitStops;
 
-	void Awake ()
+	private void Awake ()
 	{
 
 		if (instance == null) {
@@ -27,7 +27,7 @@ public class ImportPitStops : MonoBehaviour
 
 	}
 
-	IEnumerator Start ()
+	private IEnumerator Start ()
 	{
 		
 		WWW www = new WWW ("http://gis1.sandag.org/sdgis/rest/services/Transportation/BTW_PitStops_2017/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&f=pjson");

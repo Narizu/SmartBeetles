@@ -14,21 +14,39 @@ public class PointsManager : MonoBehaviour
 	public Text text3;
 	public GameObject go4;
 	public Text text4;
-	Vector3 temp;
 
+	private Vector3 temp;
+	private EnterPitStops script1;
+	private EnterPitStops script2;
+	private EnterPitStops script3;
+	private EnterPitStops script4;
+	private int code1;
+	private int code2;
 
-	void Update ()
+	private void Start ()
+	{
+
+		script1 = GameObject.Find ("GameObject1").GetComponent<EnterPitStops> ();
+		script2 = GameObject.Find ("GameObject2").GetComponent<EnterPitStops> ();
+		script3 = GameObject.Find ("GameObject3").GetComponent<EnterPitStops> ();
+		script4 = GameObject.Find ("GameObject4").GetComponent<EnterPitStops> ();
+
+		UpdateCode ();
+
+	}
+
+	private void Update ()
 	{
 
 		if (text1.text == "error" || text2.text == "error" || text3.text == "error" || text4.text == "error") {
 			
 			UpdateInfo ();
-
+		
 		}
 
 	}
 
-	void UpdateInfo ()
+	private void UpdateInfo ()
 	{
 
 		// Los números 14, 36, 44 y 81 se han obtenido llamando a la función auxiliar que he creado GetID de ImportPitStops.
@@ -54,6 +72,55 @@ public class PointsManager : MonoBehaviour
 		temp = ImportPitStops.instance.GetXY (81);
 		go4.transform.localPosition = temp;
 
+	}
+
+	private void UpdateCode () {
+	
+		code1 = Random.Range (1, 4);
+
+		switch (code1) {
+		case 1:
+			script1.setCode (1);
+			break;
+		case 2:
+			script2.setCode (1);
+			break;
+		case 3:
+			script3.setCode (1);
+			break;
+		case 4:
+			script4.setCode (1);
+			break;
+		}
+
+		code2 = Random.Range (1, 4);
+
+		while (code1 == code2) {
+
+			code2 = Random.Range (1, 4);
+
+		}
+
+		switch (code2) {
+		case 1:
+			script1.setCode (2);
+			break;
+		case 2:
+			script2.setCode (2);
+			break;
+		case 3:
+			script3.setCode (2);
+			break;
+		case 4:
+			script4.setCode (2);
+			break;
+		}
+
+		print ("GameObject1 = " + script1.getCode ());
+		print ("GameObject2 = " + script2.getCode ());
+		print ("GameObject3 = " + script3.getCode ());
+		print ("GameObject4 = " + script4.getCode ());
+	
 	}
 
 }
