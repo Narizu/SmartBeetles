@@ -74,7 +74,8 @@ public class PointsManager : MonoBehaviour
 
 	}
 
-	private void UpdateCode () {
+	private void UpdateCode ()
+	{
 	
 		code1 = Random.Range (1, 4);
 

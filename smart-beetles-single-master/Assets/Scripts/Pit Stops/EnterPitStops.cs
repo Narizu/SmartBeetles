@@ -24,12 +24,14 @@ public class EnterPitStops : MonoBehaviour
 		
 	private void OnTriggerEnter (Collider other)
 	{
+		
+		if (other.gameObject.tag == "Sphere" && code == 1) {
 
-		if (other.gameObject.tag == "Sphere")
-		{
-
-			if (sphere == null)
+			if (sphere == null) {
+				
 				sphere = other.gameObject.GetComponent<SphereControl> ();
+
+			}
 
 			bikeRun.SetRunOn ();
 			sphere.SetMaxSpeed(maxSpeedBike);
