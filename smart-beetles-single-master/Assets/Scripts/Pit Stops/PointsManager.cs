@@ -7,12 +7,16 @@ public class PointsManager : MonoBehaviour
 {
 
 	public GameObject go1;
+	public Image image1;
 	public Text text1;
 	public GameObject go2;
+	public Image image2;
 	public Text text2;
 	public GameObject go3;
+	public Image image3;
 	public Text text3;
 	public GameObject go4;
+	public Image image4;
 	public Text text4;
 
 	private Vector3 temp;
@@ -26,10 +30,15 @@ public class PointsManager : MonoBehaviour
 	private void Start ()
 	{
 
-		script1 = GameObject.Find ("GameObject1").GetComponent<EnterPitStops> ();
-		script2 = GameObject.Find ("GameObject2").GetComponent<EnterPitStops> ();
-		script3 = GameObject.Find ("GameObject3").GetComponent<EnterPitStops> ();
-		script4 = GameObject.Find ("GameObject4").GetComponent<EnterPitStops> ();
+		image1.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		image2.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		image3.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		image4.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+
+		script1 = go1.GetComponent<EnterPitStops> ();
+		script2 = go2.GetComponent<EnterPitStops> ();
+		script3 = go3.GetComponent<EnterPitStops> ();
+		script4 = go4.GetComponent<EnterPitStops> ();
 
 		UpdateCode ();
 
@@ -52,22 +61,22 @@ public class PointsManager : MonoBehaviour
 		// Los números 14, 36, 44 y 81 se han obtenido llamando a la función auxiliar que he creado GetID de ImportPitStops.
 		// Al conocer ya los números he eliminado dicha llamada para hacer más rápido el proceso, aunque la función sigue estando allí.
 
-		print ("Name: " + ImportPitStops.instance.GetName (14) + ", x: " + ImportPitStops.instance.GetXY (14).x + ", y: " + ImportPitStops.instance.GetXY (14).y);
+		//print (ImportPitStops.instance.GetName (14) + " (" + ImportPitStops.instance.GetXY (14).x + ", " + ImportPitStops.instance.GetXY (14).y + ")");
 		text1.text = ImportPitStops.instance.GetName (14);
 		temp = ImportPitStops.instance.GetXY (14);
 		go1.transform.localPosition = temp;
 
-		print ("Name: " + ImportPitStops.instance.GetName (36) + ", x: " + ImportPitStops.instance.GetXY (36).x + ", y: " + ImportPitStops.instance.GetXY (36).y);
+		//print (ImportPitStops.instance.GetName (36) + " (" + ImportPitStops.instance.GetXY (36).x + ", " + ImportPitStops.instance.GetXY (36).y + ")");
 		text2.text = ImportPitStops.instance.GetName (36);
 		temp = ImportPitStops.instance.GetXY (36);
 		go2.transform.localPosition = temp;
 
-		print ("Name: " + ImportPitStops.instance.GetName (44) + ", x: " + ImportPitStops.instance.GetXY (44).x + ", y: " + ImportPitStops.instance.GetXY (44).y);
+		//print (ImportPitStops.instance.GetName (44) + " (" + ImportPitStops.instance.GetXY (44).x + ", " + ImportPitStops.instance.GetXY (44).y + ")");
 		text3.text = ImportPitStops.instance.GetName (44);
 		temp = ImportPitStops.instance.GetXY (44);
 		go3.transform.localPosition = temp;
 
-		print ("Name: " + ImportPitStops.instance.GetName (81) + ", x: " + ImportPitStops.instance.GetXY (81).x + ", y: " + ImportPitStops.instance.GetXY (81).y);
+		//print (ImportPitStops.instance.GetName (81) + " (" + ImportPitStops.instance.GetXY (81).x + ", " + ImportPitStops.instance.GetXY (81).y + ")");
 		text4.text = ImportPitStops.instance.GetName (81);
 		temp = ImportPitStops.instance.GetXY (81);
 		go4.transform.localPosition = temp;
@@ -77,28 +86,32 @@ public class PointsManager : MonoBehaviour
 	private void UpdateCode ()
 	{
 	
-		code1 = Random.Range (1, 4);
+		code1 = Random.Range (1, 5);
 
 		switch (code1) {
 		case 1:
 			script1.setCode (1);
+			image1.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 			break;
 		case 2:
 			script2.setCode (1);
+			image2.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 			break;
 		case 3:
 			script3.setCode (1);
+			image3.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 			break;
 		case 4:
 			script4.setCode (1);
+			image4.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 			break;
 		}
 
-		code2 = Random.Range (1, 4);
+		code2 = Random.Range (1, 5);
 
 		while (code1 == code2) {
 
-			code2 = Random.Range (1, 4);
+			code2 = Random.Range (1, 5);
 
 		}
 
@@ -117,10 +130,43 @@ public class PointsManager : MonoBehaviour
 			break;
 		}
 
-		print ("GameObject1 = " + script1.getCode ());
-		print ("GameObject2 = " + script2.getCode ());
-		print ("GameObject3 = " + script3.getCode ());
-		print ("GameObject4 = " + script4.getCode ());
+		print (script1.name + " = " + script1.getCode ());
+		print (script2.name + " = " + script2.getCode ());
+		print (script3.name + " = " + script3.getCode ());
+		print (script4.name + " = " + script4.getCode ());
+	
+	}
+
+	public void SetBikeBlue ()
+	{
+
+		image1.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		image2.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		image3.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		image4.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+
+	}
+
+	public void SetBikeGreen ()
+	{
+	
+		if (script1.getCode () == 2) {
+		
+			image1.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+		
+		} else if (script2.getCode () == 2) {
+		
+			image2.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+		
+		} else if (script3.getCode () == 2) {
+		
+			image3.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+		
+		} else {
+		
+			image4.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+		
+		}
 	
 	}
 

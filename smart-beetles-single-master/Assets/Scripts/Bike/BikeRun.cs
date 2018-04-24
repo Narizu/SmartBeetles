@@ -22,4 +22,19 @@ public class BikeRun : MonoBehaviour
 
 	}
 
+	public bool GetRun ()
+	{
+
+		if (runImage.enabled) {
+
+			return true;
+
+		} else {
+		
+			return false;
+		
+		}
+
+	}
+
 }

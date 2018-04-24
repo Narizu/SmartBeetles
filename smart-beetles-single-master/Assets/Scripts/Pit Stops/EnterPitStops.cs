@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnterPitStops : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class EnterPitStops : MonoBehaviour
 	private float maxSpeedBike;
 	private BikeRun bikeRun;
 	private int code;
+	private PointsManager pointsManager;
 
-	private void Start ()
+	private void Awake ()
 	{
 
 		maxSpeed = 2f;
@@ -19,13 +21,14 @@ public class EnterPitStops : MonoBehaviour
 		bikeRun = GameObject.Find ("Ground (Bike)").GetComponent<BikeRun> ();
 		bikeRun.SetRunOff ();
 		code = 0;
+		pointsManager = GameObject.Find ("CanvasPitStops").GetComponent<PointsManager> ();
 
 	}
 		
 	private void OnTriggerEnter (Collider other)
 	{
 		
-		if (other.gameObject.tag == "Sphere" && code == 1) {
+		if (other.gameObject.tag == "Sphere") {
 
 			if (sphere == null) {
 				
@@ -33,8 +36,20 @@ public class EnterPitStops : MonoBehaviour
 
 			}
 
-			bikeRun.SetRunOn ();
-			sphere.SetMaxSpeed(maxSpeedBike);
+			if (code == 1) {
+
+				bikeRun.SetRunOn ();
+				sphere.SetMaxSpeed (maxSpeedBike);
+				pointsManager.SetBikeBlue ();
+				pointsManager.SetBikeGreen ();
+
+			} else if (code == 2 && bikeRun.GetRun ()) {
+			
+				bikeRun.SetRunOff ();
+				sphere.SetMaxSpeed (maxSpeed);
+				pointsManager.SetBikeBlue ();
+			
+			}
 
 		}
 
@@ -53,22 +68,5 @@ public class EnterPitStops : MonoBehaviour
 		return code;
 
 	}
-
-	/*
-	private void OnTriggerExit (Collider other)
-	{
-
-		if (other.gameObject.tag == "Sphere")
-		{
-
-			if (sphere == null)
-				sphere = other.gameObject.GetComponent<SphereControl> ();
-
-			bikeRun.SetRunOff ();
-			sphere.SetMaxSpeed(maxSpeed);
-
-		}
-
-	}
-	*/
+		
 }
