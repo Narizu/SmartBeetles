@@ -17,12 +17,15 @@ public class SphereControl : MonoBehaviour {
 
     private AudioManager audioManager;
 
+	private EnterPitStops enterPitStops;
+
     private void Start ()
     {
         sphereBody = GetComponent<Rigidbody>();
         pView = GetComponent<PhotonView>();
         pacData = GetComponent<PacmanData>();
         audioManager = GameObject.Find("AudioObject").GetComponent<AudioManager>();
+		//enterPitStops = GameObject.Find("
     }
 
     private void FixedUpdate ()

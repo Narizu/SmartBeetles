@@ -6,19 +6,18 @@ public class ParticleManager : MonoBehaviour
 {
 
 	private SphereControl sphere;
+	private ParticleSystem ps;
 
-	void Start ()
+	private void Start ()
 	{
-		
-		//if (sphere == null) {
 
-			sphere = GameObject.FindGameObjectWithTag ("Sphere").GetComponent<SphereControl> ();
-
-		//}
+		ps = GetComponent<ParticleSystem> ();
+		var em = ps.emission;
+		em.enabled = false;
 
 	}
 
-	void Update ()
+	private void Update ()
 	{
 		
 		if (sphere == null) {
@@ -28,6 +27,14 @@ public class ParticleManager : MonoBehaviour
 		}
 
 		transform.position = sphere.transform.position;
+
+	}
+
+	public void SetParticles (bool partiOnOff)
+	{
+	
+		var em = ps.emission;
+		em.enabled = partiOnOff;
 
 	}
 

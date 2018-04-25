@@ -12,6 +12,8 @@ public class EnterPitStops : MonoBehaviour
 	private BikeRun bikeRun;
 	private int code;
 	private PointsManager pointsManager;
+	private ParticleManager particleManager;
+	private GameManager gameManager;
 
 	private void Awake ()
 	{
@@ -22,6 +24,8 @@ public class EnterPitStops : MonoBehaviour
 		bikeRun.SetRunOff ();
 		code = 0;
 		pointsManager = GameObject.Find ("CanvasPitStops").GetComponent<PointsManager> ();
+		particleManager = GameObject.Find ("Particle System").GetComponent<ParticleManager> ();
+		gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
 
 	}
 		
@@ -42,16 +46,30 @@ public class EnterPitStops : MonoBehaviour
 				sphere.SetMaxSpeed (maxSpeedBike);
 				pointsManager.SetBikeBlue ();
 				pointsManager.SetBikeGreen ();
+				particleManager.SetParticles (true);
 
 			} else if (code == 2 && bikeRun.GetRun ()) {
 			
 				bikeRun.SetRunOff ();
 				sphere.SetMaxSpeed (maxSpeed);
 				pointsManager.SetBikeBlue ();
+				particleManager.SetParticles (false);
+				gameManager.winGame ("1");
 			
 			}
 
 		}
+
+	}
+
+	public void restartPitStop()
+	{
+
+		bikeRun.SetRunOff ();
+		sphere.SetMaxSpeed (maxSpeed);
+		pointsManager.SetBikeBlue ();
+		pointsManager.SetBikeGreen ();
+		particleManager.SetParticles (false);
 
 	}
 
