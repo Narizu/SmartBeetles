@@ -170,4 +170,29 @@ public class PointsManager : MonoBehaviour
 	
 	}
 
+	public void SetBikeDefault ()
+	{
+
+		SetBikeBlue ();
+
+		if (script1.getCode () == 1) {
+
+			image1.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+
+		} else if (script2.getCode () == 1) {
+
+			image2.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+
+		} else if (script3.getCode () == 1) {
+
+			image3.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+
+		} else {
+
+			image4.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+
+		}
+
+	}
+
 }

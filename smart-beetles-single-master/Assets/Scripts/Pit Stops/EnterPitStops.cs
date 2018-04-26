@@ -64,12 +64,17 @@ public class EnterPitStops : MonoBehaviour
 
 	public void restartPitStop()
 	{
+		
+		if (sphere == null) {
+			
+			sphere = gameObject.GetComponent<SphereControl> ();
+
+		}
 
 		bikeRun.SetRunOff ();
-		sphere.SetMaxSpeed (maxSpeed);
-		pointsManager.SetBikeBlue ();
-		pointsManager.SetBikeGreen ();
+		pointsManager.SetBikeDefault ();
 		particleManager.SetParticles (false);
+		sphere.SetMaxSpeed (maxSpeed);
 
 	}
 

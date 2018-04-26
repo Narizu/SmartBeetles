@@ -17,7 +17,10 @@ public class SphereControl : MonoBehaviour {
 
     private AudioManager audioManager;
 
-	private EnterPitStops enterPitStops;
+	private EnterPitStops enterPitStops1;
+	private EnterPitStops enterPitStops2;
+	private EnterPitStops enterPitStops3;
+	private EnterPitStops enterPitStops4;
 
     private void Start ()
     {
@@ -25,7 +28,11 @@ public class SphereControl : MonoBehaviour {
         pView = GetComponent<PhotonView>();
         pacData = GetComponent<PacmanData>();
         audioManager = GameObject.Find("AudioObject").GetComponent<AudioManager>();
-		//enterPitStops = GameObject.Find("
+
+		enterPitStops1 = GameObject.Find ("GameObject1").GetComponent<EnterPitStops> ();
+		enterPitStops2 = GameObject.Find ("GameObject2").GetComponent<EnterPitStops> ();
+		enterPitStops3 = GameObject.Find ("GameObject3").GetComponent<EnterPitStops> ();
+		enterPitStops4 = GameObject.Find ("GameObject4").GetComponent<EnterPitStops> ();
     }
 
     private void FixedUpdate ()
@@ -104,6 +111,7 @@ public class SphereControl : MonoBehaviour {
         velocity += slopeVector * Time.deltaTime;
         sphereBody.velocity = velocity;
         //Camera.main.transform.parent.transform.eulerAngles = angle;
+		print(velocity);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -177,6 +185,11 @@ public class SphereControl : MonoBehaviour {
                     pacData.justTouched = true;
 
                     otherPView.RPC("loseAllGarbage", PhotonTargets.Others);
+
+					enterPitStops1.restartPitStop ();
+					enterPitStops2.restartPitStop ();
+					enterPitStops3.restartPitStop ();
+					enterPitStops4.restartPitStop ();
                 }
             }
         }
