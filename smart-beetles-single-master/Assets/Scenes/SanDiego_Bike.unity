@@ -5254,6 +5254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e234adbb1424dfb9927e20e83fb4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  go: {fileID: 1064345495627080, guid: b351bd45e15334fa4a085ff82070956f, type: 2}
+  image: {fileID: 114460309565907226, guid: b351bd45e15334fa4a085ff82070956f, type: 2}
+  text: {fileID: 114805505510421868, guid: b351bd45e15334fa4a085ff82070956f, type: 2}
   go1: {fileID: 318716377}
   image1: {fileID: 29723181}
   text1: {fileID: 707651656}
@@ -5696,7 +5699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -54.999695, y: -56.82715}
+  m_AnchoredPosition: {x: -54.999817, y: -56.82715}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &823457529
@@ -10297,15 +10300,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitStops:
-    displayFieldName: 
-    fieldAliases:
-      Name: 
+    exceededTransferLimit: 0
+    features: []
+    fields: []
     geometryType: 
     spatialReference:
       wkid: 0
       latestWkid: 0
-    fields: []
-    features: []
+    globalIdFieldName: 
+    objectIdFieldName: 
+    hasZ: 0
+    hasM: 0
 --- !u!4 &1536325339
 Transform:
   m_ObjectHideFlags: 0
@@ -10733,7 +10738,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1723567315
+  randomSeed: -306257773
   InitialModule:
     serializedVersion: 3
     enabled: 1

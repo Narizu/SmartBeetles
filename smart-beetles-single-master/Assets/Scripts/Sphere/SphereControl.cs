@@ -111,7 +111,9 @@ public class SphereControl : MonoBehaviour {
         velocity += slopeVector * Time.deltaTime;
         sphereBody.velocity = velocity;
         //Camera.main.transform.parent.transform.eulerAngles = angle;
-		print(velocity);
+
+		//print(velocity);
+
     }
 
     private void OnCollisionEnter(Collision collision)
