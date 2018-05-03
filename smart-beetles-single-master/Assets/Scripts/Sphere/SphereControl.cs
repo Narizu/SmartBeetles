@@ -16,23 +16,24 @@ public class SphereControl : MonoBehaviour {
     private PacmanData pacData;
 
     private AudioManager audioManager;
-
+	/*
 	private EnterPitStops enterPitStops1;
 	private EnterPitStops enterPitStops2;
 	private EnterPitStops enterPitStops3;
 	private EnterPitStops enterPitStops4;
-
+*/
     private void Start ()
     {
         sphereBody = GetComponent<Rigidbody>();
         pView = GetComponent<PhotonView>();
         pacData = GetComponent<PacmanData>();
         audioManager = GameObject.Find("AudioObject").GetComponent<AudioManager>();
-
+		/*
 		enterPitStops1 = GameObject.Find ("GameObject1").GetComponent<EnterPitStops> ();
 		enterPitStops2 = GameObject.Find ("GameObject2").GetComponent<EnterPitStops> ();
 		enterPitStops3 = GameObject.Find ("GameObject3").GetComponent<EnterPitStops> ();
 		enterPitStops4 = GameObject.Find ("GameObject4").GetComponent<EnterPitStops> ();
+		*/
     }
 
     private void FixedUpdate ()
@@ -187,11 +188,12 @@ public class SphereControl : MonoBehaviour {
                     pacData.justTouched = true;
 
                     otherPView.RPC("loseAllGarbage", PhotonTargets.Others);
-
+					/*
 					enterPitStops1.restartPitStop ();
 					enterPitStops2.restartPitStop ();
 					enterPitStops3.restartPitStop ();
 					enterPitStops4.restartPitStop ();
+					*/
                 }
             }
         }

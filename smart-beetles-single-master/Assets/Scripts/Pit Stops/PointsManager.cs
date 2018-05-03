@@ -10,6 +10,7 @@ public class PointsManager : MonoBehaviour
 	public Image image;
 	public Text text;
 
+	/*
 	public GameObject go1;
 	public Image image1;
 	public Text text1;
@@ -23,18 +24,24 @@ public class PointsManager : MonoBehaviour
 	public Image image4;
 	public Text text4;
 
-	private Vector3 temp;
 	private EnterPitStops script1;
 	private EnterPitStops script2;
 	private EnterPitStops script3;
 	private EnterPitStops script4;
 	private int code1;
-	private int code2;
+	private int code2
+	*/
+
+	private List<EnterPitStops> scripts;
+	private EnterPitStops script;
+	private Vector3 temp;
 	private List<int> inside;
+	private bool once;
+	//private bool twice;
 
 	private void Start ()
 	{
-		
+		/*
 		image1.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
 		image2.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
 		image3.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
@@ -44,21 +51,31 @@ public class PointsManager : MonoBehaviour
 		script2 = go2.GetComponent<EnterPitStops> ();
 		script3 = go3.GetComponent<EnterPitStops> ();
 		script4 = go4.GetComponent<EnterPitStops> ();
-
+*/
+		scripts = new List<EnterPitStops> ();
 		inside = new List<int> ();
+		image.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		text.text = "";
+		once = true;
+		//twice = true;
 
-		UpdateCode ();
+		//UpdateCode ();
 
 	}
 
 	private void Update ()
 	{
 
-		if (text.text == "error"/* || text2.text == "error" || text3.text == "error" || text4.text == "error"*/) {
+		if (ImportPitStops.instance.GetName (0) != "" && once/* || text2.text == "error" || text3.text == "error" || text4.text == "error"*/) {
 			
 			UpdateInfo ();
+			once = false;
+
+		} /*else if (once) {
 		
-		}
+			UpdateInfo ();
+		
+		}*/
 
 	}
 
@@ -68,30 +85,37 @@ public class PointsManager : MonoBehaviour
 		// Los números 14, 36, 44 y 81 se han obtenido llamando a la función auxiliar que he creado GetID de ImportPitStops.
 		// Al conocer ya los números he eliminado dicha llamada para hacer más rápido el proceso, aunque la función sigue estando allí.
 
-		if (ImportPitStops.instance.GetName (0) != "error") {
+		/*
+		if (!twice) {
+		
+			once = false;
+		
+		}
 
-			for (int i = 0; i < 102; i++) {
+		twice = false;
+		*/
 
-				if (ImportPitStops.instance.GetXY (i).x > -200 && ImportPitStops.instance.GetXY (i).x < 200 && ImportPitStops.instance.GetXY (i).y > -150 && ImportPitStops.instance.GetXY (i).y < 150) {
+		for (int i = 0; i < 102; i++) {
+		
+			if (ImportPitStops.instance.GetXY (i).x > -200 && ImportPitStops.instance.GetXY (i).x < 200 && ImportPitStops.instance.GetXY (i).y > -150 && ImportPitStops.instance.GetXY (i).y < 150) {
 
-					inside.Add (i);
-					//print ("Entra " + i);
+				inside.Add (i);
+				//print ("Entra " + i);
 
-				} else {
+			} /*else {
 
-					//print ("No entra " + i);
+				print ("No entra " + i);
 
-				}
-
-			}
-
-			for (int i = 0; i < inside.Count; i++) {
-
-				//print (i + ": " + inside [i]);
-
-			}
+			}*/
 
 		}
+		/*
+		for (int i = 0; i < inside.Count; i++) {
+
+			print (i + ": " + inside [i]);
+
+		}
+		*/
 
 		for (int i = 0; i < inside.Count; i++) {
 
@@ -99,16 +123,22 @@ public class PointsManager : MonoBehaviour
 			//Image image;
 			//Text text;
 
-			Instantiate (go);
-			Instantiate (image);
-			Instantiate (text);
+			//Instantiate (go);
+			//Instantiate (image);
+			//Instantiate (text);
+
+			//mygo.transform.parent = transform;
 
 			//bikeRun = GameObject.Find ("Ground (Bike)").GetComponent<BikeRun> ();
 
 			print (ImportPitStops.instance.GetName (inside[i]) + " (" + ImportPitStops.instance.GetXY (inside[i]).x + ", " + ImportPitStops.instance.GetXY (inside[i]).y + ")");
 			text.text = ImportPitStops.instance.GetName (inside[i]);
 			temp = ImportPitStops.instance.GetXY (inside[i]);
-			go.transform.localPosition = temp;
+			GameObject mygo = Instantiate (go, new Vector3 (0, 0, 0), Quaternion.identity, transform);
+			mygo.transform.localPosition = temp;
+			mygo.transform.localRotation = Quaternion.identity;
+			script = mygo.GetComponent<EnterPitStops> ();
+			scripts.Add (script);
 
 		}
 
@@ -162,7 +192,7 @@ public class PointsManager : MonoBehaviour
 		go4.transform.localPosition = temp;
 		*/
 	}
-
+	/*
 	private void UpdateCode ()
 	{
 	
@@ -274,5 +304,5 @@ public class PointsManager : MonoBehaviour
 		}
 
 	}
-
+*/
 }

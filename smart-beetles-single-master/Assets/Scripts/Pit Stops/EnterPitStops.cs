@@ -44,15 +44,15 @@ public class EnterPitStops : MonoBehaviour
 
 				bikeRun.SetRunOn ();
 				sphere.SetMaxSpeed (maxSpeedBike);
-				pointsManager.SetBikeBlue ();
-				pointsManager.SetBikeGreen ();
+				//pointsManager.SetBikeBlue ();
+				//pointsManager.SetBikeGreen ();
 				particleManager.SetParticles (true);
 
 			} else if (code == 2 && bikeRun.GetRun ()) {
 			
 				bikeRun.SetRunOff ();
 				sphere.SetMaxSpeed (maxSpeed);
-				pointsManager.SetBikeBlue ();
+				//pointsManager.SetBikeBlue ();
 				particleManager.SetParticles (false);
 				gameManager.winGame ("1");
 			
@@ -72,7 +72,7 @@ public class EnterPitStops : MonoBehaviour
 		}
 
 		bikeRun.SetRunOff ();
-		pointsManager.SetBikeDefault ();
+		//pointsManager.SetBikeDefault ();
 		particleManager.SetParticles (false);
 		sphere.SetMaxSpeed (maxSpeed);
 

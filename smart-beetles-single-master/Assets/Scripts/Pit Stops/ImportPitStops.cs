@@ -133,7 +133,7 @@ public class ImportPitStops : MonoBehaviour
 
 		} else {
 
-			return "error";
+			return "";
 
 		}
 
