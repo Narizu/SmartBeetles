@@ -55,7 +55,7 @@ public class PointsManager : MonoBehaviour
 */
 		scripts = new List<EnterPitStops> ();
 		inside = new List<int> ();
-		image.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		//image.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
 		text.text = "";
 		once = true;
 		//twice = true;
@@ -140,14 +140,35 @@ public class PointsManager : MonoBehaviour
 			mygo.transform.localRotation = Quaternion.identity;
 			script = mygo.GetComponent<EnterPitStops> ();
 			scripts.Add (script);
-			Image myimage = Instantiate (image, new Vector3 (0, 0, 0), Quaternion.identity, mygo.transform);
-			myimage.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
-
+			/*
+			Image myimage = Instantiate (image, new Vector3 (0, 0, 3), Quaternion.identity, mygo.transform);
+			myimage.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+			myimage.transform.localPosition = new Vector3 (0, 0, -3);
+			myimage.transform.localRotation = Quaternion.identity;
+			myimage.transform.SetSiblingIndex (0);
+			*/
 		}
 
 		if (!once) {
 			
 			UpdateCode ();
+
+		}
+
+		for (int i = 0; i < scripts.Count; i++) {
+
+			if (scripts [i].getCode () == 1) {
+
+
+				Image myimage = Instantiate (image, new Vector3 (0, 0, 3), Quaternion.identity, scripts [i].gameObject.transform);
+				myimage.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+				myimage.transform.localPosition = new Vector3 (0, 0, -3);
+				myimage.transform.localRotation = Quaternion.identity;
+				myimage.transform.SetSiblingIndex (0);
+
+				print ("Thanos chasquea los dedos y se carga a la mitad del universo.");
+				
+			}
 
 		}
 
