@@ -28,9 +28,10 @@ public class PointsManager : MonoBehaviour
 	private EnterPitStops script2;
 	private EnterPitStops script3;
 	private EnterPitStops script4;
-	private int code1;
-	private int code2
 	*/
+
+	private int code1;
+	private int code2;
 
 	private List<EnterPitStops> scripts;
 	private EnterPitStops script;
@@ -67,9 +68,9 @@ public class PointsManager : MonoBehaviour
 	{
 
 		if (ImportPitStops.instance.GetName (0) != "" && once/* || text2.text == "error" || text3.text == "error" || text4.text == "error"*/) {
-			
-			UpdateInfo ();
+
 			once = false;
+			UpdateInfo ();
 
 		} /*else if (once) {
 		
@@ -139,6 +140,14 @@ public class PointsManager : MonoBehaviour
 			mygo.transform.localRotation = Quaternion.identity;
 			script = mygo.GetComponent<EnterPitStops> ();
 			scripts.Add (script);
+			Image myimage = Instantiate (image, new Vector3 (0, 0, 0), Quaternion.identity, mygo.transform);
+			myimage.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+
+		}
+
+		if (!once) {
+			
+			UpdateCode ();
 
 		}
 
@@ -192,12 +201,14 @@ public class PointsManager : MonoBehaviour
 		go4.transform.localPosition = temp;
 		*/
 	}
-	/*
+
 	private void UpdateCode ()
 	{
 	
-		code1 = Random.Range (1, 5);
+		code1 = Random.Range (0, scripts.Count);
+		scripts [code1].setCode (1);
 
+		/*
 		switch (code1) {
 		case 1:
 			script1.setCode (1);
@@ -216,15 +227,19 @@ public class PointsManager : MonoBehaviour
 			image4.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 			break;
 		}
+		*/
 
-		code2 = Random.Range (1, 5);
+		code2 = Random.Range (0, scripts.Count);
 
 		while (code1 == code2) {
 
-			code2 = Random.Range (1, 5);
+			code2 = Random.Range (0, scripts.Count);
 
 		}
 
+		scripts [code2].setCode (2);
+
+		/*
 		switch (code2) {
 		case 1:
 			script1.setCode (2);
@@ -239,27 +254,38 @@ public class PointsManager : MonoBehaviour
 			script4.setCode (2);
 			break;
 		}
+		*/
 
-		print (script1.name + " = " + script1.getCode ());
-		print (script2.name + " = " + script2.getCode ());
-		print (script3.name + " = " + script3.getCode ());
-		print (script4.name + " = " + script4.getCode ());
+		for (int i = 0; i < scripts.Count; i++) {
+			
+			print (i + " = " + scripts[i].getCode ());
+
+		}
 	
 	}
 
 	public void SetBikeBlue ()
 	{
-
+		print ("Set Bike Blue");
+		image.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
+		/*
 		image1.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
 		image2.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
 		image3.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
 		image4.sprite = Resources.Load<Sprite> ("Sprites/bikeBlue");
-
+		*/
 	}
 
 	public void SetBikeGreen ()
 	{
-	
+		print ("Set Bike Green");
+		if (script.getCode () == 2) {
+		
+			print ("Get Code 2");
+			image.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+		
+		}
+		/*
 		if (script1.getCode () == 2) {
 		
 			image1.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
@@ -277,14 +303,20 @@ public class PointsManager : MonoBehaviour
 			image4.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 		
 		}
-	
+		*/
 	}
 
 	public void SetBikeDefault ()
 	{
-
+		print ("Set Bike Default");
 		SetBikeBlue ();
-
+		if (script.getCode () == 1) {
+		
+			print ("Get Code 2");
+			image.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
+		
+		}
+		/*
 		if (script1.getCode () == 1) {
 
 			image1.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
@@ -302,7 +334,7 @@ public class PointsManager : MonoBehaviour
 			image4.sprite = Resources.Load<Sprite> ("Sprites/bikeGreen");
 
 		}
-
+		*/
 	}
-*/
+
 }
