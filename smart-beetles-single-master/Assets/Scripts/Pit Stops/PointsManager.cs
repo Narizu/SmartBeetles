@@ -35,7 +35,7 @@ public class PointsManager : MonoBehaviour
 	private void Update ()
 	{
 
-		if (ImportPitStops.instance.GetName (0) != "" && once/* || text2.text == "error" || text3.text == "error" || text4.text == "error"*/) {
+		if (ImportPitStops.instance.GetName (0) != "" && once) {
 
 			once = false;
 			UpdateInfo ();
@@ -164,6 +164,13 @@ public class PointsManager : MonoBehaviour
 
 		}
 			
+	}
+
+	public List<EnterPitStops> GetScripts ()
+	{
+
+		return scripts;
+
 	}
 
 }

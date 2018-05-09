@@ -28,7 +28,7 @@ public class EnterPitStops : MonoBehaviour
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
 
 	}
-		
+
 	private void OnTriggerEnter (Collider other)
 	{
 		
@@ -74,7 +74,7 @@ public class EnterPitStops : MonoBehaviour
 		bikeRun.SetRunOff ();
 		pointsManager.SetBikeDefault ();
 		particleManager.SetParticles (false);
-		sphere.SetMaxSpeed (maxSpeed);
+		//sphere.SetMaxSpeed (maxSpeed);
 
 	}
 
