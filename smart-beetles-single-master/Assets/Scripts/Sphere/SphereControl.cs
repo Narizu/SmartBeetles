@@ -21,7 +21,7 @@ public class SphereControl : MonoBehaviour {
 	private EnterPitStops enterPitStops2;
 	private EnterPitStops enterPitStops3;
 	private EnterPitStops enterPitStops4;
-*/
+	*/
     private void Start ()
     {
         sphereBody = GetComponent<Rigidbody>();
