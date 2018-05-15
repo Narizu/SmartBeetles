@@ -7,25 +7,25 @@ public class EnterPitStops : MonoBehaviour
 {
 
 	private SphereControl sphere;
-	private float maxSpeed;
-	private float maxSpeedBike;
 	private BikeRun bikeRun;
-	private int code;
 	private PointsManager pointsManager;
 	private ParticleManager particleManager;
 	private GameManager gameManager;
+	private float maxSpeedBike;
+	private float maxSpeed;
+	private int code;
 
 	private void Awake ()
 	{
 
-		maxSpeed = 2f;
-		maxSpeedBike = BikeSettings.bikeSpeed;
 		bikeRun = GameObject.Find ("Ground (Bike)").GetComponent<BikeRun> ();
 		bikeRun.SetRunOff ();
-		code = 0;
 		pointsManager = GameObject.Find ("CanvasPitStops").GetComponent<PointsManager> ();
 		particleManager = GameObject.Find ("Particle System").GetComponent<ParticleManager> ();
 		gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
+		maxSpeedBike = BikeSettings.bikeSpeed;
+		maxSpeed = 2f;
+		code = 0;
 
 	}
 

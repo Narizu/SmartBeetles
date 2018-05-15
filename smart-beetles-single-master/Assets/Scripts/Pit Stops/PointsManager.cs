@@ -7,27 +7,26 @@ public class PointsManager : MonoBehaviour
 {
 
 	public GameObject go;
-	public Image image;
 	public Text text;
+	public Image image;
 
-	private int code1;
-	private int code2;
-
-	private List<Image> images;
 	private List<EnterPitStops> scripts;
+	private List<Image> images;
+	private List<int> inside;
 	private EnterPitStops script;
 	private Vector3 temp;
-	private List<int> inside;
 	private bool once;
+	private int code1;
+	private int code2;
 
 	private void Start ()
 	{
 
-		images = new List<Image> ();
-		scripts = new List<EnterPitStops> ();
-		inside = new List<int> ();
-
 		text.text = "";
+
+		scripts = new List<EnterPitStops> ();
+		images = new List<Image> ();
+		inside = new List<int> ();
 		once = true;
 
 	}
@@ -59,7 +58,7 @@ public class PointsManager : MonoBehaviour
 
 		for (int i = 0; i < inside.Count; i++) {
 
-			print (ImportPitStops.instance.GetName (inside[i]) + " (" + ImportPitStops.instance.GetXY (inside[i]).x + ", " + ImportPitStops.instance.GetXY (inside[i]).y + ")");
+			//print (ImportPitStops.instance.GetName (inside[i]) + " (" + ImportPitStops.instance.GetXY (inside[i]).x + ", " + ImportPitStops.instance.GetXY (inside[i]).y + ")");
 			text.text = ImportPitStops.instance.GetName (inside[i]);
 			temp = ImportPitStops.instance.GetXY (inside[i]);
 			GameObject mygo = Instantiate (go, new Vector3 (0, 0, 0), Quaternion.identity, transform);
@@ -114,13 +113,13 @@ public class PointsManager : MonoBehaviour
 		}
 
 		scripts [code2].setCode (2);
-
+		/*
 		for (int i = 0; i < scripts.Count; i++) {
 			
 			print (i + " = " + scripts[i].getCode ());
 
 		}
-	
+		*/
 	}
 
 	public void SetBikeBlue ()

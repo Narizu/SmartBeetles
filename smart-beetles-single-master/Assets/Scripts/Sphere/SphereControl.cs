@@ -27,7 +27,7 @@ public class SphereControl : MonoBehaviour {
         pacData = GetComponent<PacmanData>();
         audioManager = GameObject.Find("AudioObject").GetComponent<AudioManager>();
 
-		pointsManager = GameObject.Find("CanvasPitStops").GetComponent<PointsManager>();
+		pointsManager = GameObject.Find("CanvasPitStops").GetComponent<PointsManager>(); // Aquí hay problemas
 
     }
 
@@ -184,7 +184,7 @@ public class SphereControl : MonoBehaviour {
 
                     otherPView.RPC("loseAllGarbage", PhotonTargets.Others);
 
-					for (int i = 0; i < pointsManager.GetScripts ().Count; i++) {
+					for (int i = 0; i < pointsManager.GetScripts ().Count; i++) { // Aquí hay problemas
 
 						pointsManager.GetScripts () [i].restartPitStop ();
 
