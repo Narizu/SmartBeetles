@@ -6,7 +6,9 @@ public class SphereAI : MonoBehaviour {
 
     private NavMeshAgent nav;
     private PacmanData pacData;
+	private BikeData bikeData;
     public PacmanModeManager pmManager;
+	public BikeModeManager bikeManager;
     private PhotonView pView;
     private Transform objective;
 

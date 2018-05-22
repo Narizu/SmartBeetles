@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameMode {SINGLE, PACMAN, MATCHMAKING}
+public enum GameMode {SINGLE, PACMAN, MATCHMAKING, BIKE}
 public enum LevelType {NONE, CHECKPOINTS}
 public enum ControlType {SENSOR, TOUCH}
 public enum Language {SPANISH, ENGLISH}

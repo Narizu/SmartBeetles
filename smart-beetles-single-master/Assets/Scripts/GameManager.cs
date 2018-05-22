@@ -215,7 +215,10 @@ public class GameManager : MonoBehaviour {
 
     public void loadLevel(string mode)
     {
-        GameData.getInstance().setGameMode(GameMode.PACMAN);
+		if (mode == "Bike")
+        	GameData.getInstance().setGameMode(GameMode.BIKE);
+		else
+			GameData.getInstance().setGameMode(GameMode.PACMAN);
         string city = GameData.getInstance().getCity();
         string sceneName = city + "_" + mode;
         SceneManager.LoadScene(sceneName);
