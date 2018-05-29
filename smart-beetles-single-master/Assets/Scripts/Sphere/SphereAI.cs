@@ -6,9 +6,8 @@ public class SphereAI : MonoBehaviour {
 
     private NavMeshAgent nav;
     private PacmanData pacData;
-	private BikeData bikeData;
     public PacmanModeManager pmManager;
-	public BikeModeManager bikeManager;
+	public BikeModeManager bmManager;
     private PhotonView pView;
     private Transform objective;
 
@@ -20,8 +19,11 @@ public class SphereAI : MonoBehaviour {
         float speedVar = Random.Range(-0.5f, 0.5f);
         nav.speed += nav.speed * speedVar;
         nav.updateRotation = true;
-        objective = pmManager.currentPac.transform;
-
+		if (GameData.getInstance ().getGameMode () == GameMode.BIKE) {
+			objective = bmManager.currentPac.transform;
+		} else {
+			objective = pmManager.currentPac.transform;
+		}
     }
 	
 	private void Update ()
@@ -32,15 +34,17 @@ public class SphereAI : MonoBehaviour {
         }
         else {
             Vector3 closestCheckpoint = Vector3.one * 999f;
-            for (int i = 0; i < pmManager.checkPoints.Count; i++) {
-                if (pmManager.checkPoints[i] != null) {
-                    Vector3 currentDist = closestCheckpoint - transform.position;
-                    Vector3 newDist = pmManager.checkPoints[i].transform.position - transform.position;
-                    if (newDist.magnitude < currentDist.magnitude) {
-                        closestCheckpoint = pmManager.checkPoints[i].transform.position;
-                    }
-                }
-            }
+			if (GameData.getInstance ().getGameMode () != GameMode.BIKE) {
+				for (int i = 0; i < pmManager.checkPoints.Count; i++) {
+					if (pmManager.checkPoints[i] != null) {
+						Vector3 currentDist = closestCheckpoint - transform.position;
+						Vector3 newDist = pmManager.checkPoints[i].transform.position - transform.position;
+						if (newDist.magnitude < currentDist.magnitude) {
+							closestCheckpoint = pmManager.checkPoints[i].transform.position;
+						}
+					}
+				}
+			}
             nav.destination = closestCheckpoint;
         }
     }

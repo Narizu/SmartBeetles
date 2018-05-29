@@ -29,14 +29,16 @@ public class AngleManager : MonoBehaviour {
 
     private void getAngles()
     {
-        Vector3 dir = bottle.transform.position - transform.position;
-        bottleAngle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-        dir = banana.transform.position - transform.position;
-        bananaAngle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-        dir = paperball.transform.position - transform.position;
-        paperballAngle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-        dir = fishbone.transform.position - transform.position;
-        fishboneAngle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+		if (GameData.getInstance ().getGameMode () != GameMode.BIKE) {
+			Vector3 dir = bottle.transform.position - transform.position;
+			bottleAngle = Mathf.Atan2 (dir.z, dir.x) * Mathf.Rad2Deg;
+			dir = banana.transform.position - transform.position;
+			bananaAngle = Mathf.Atan2 (dir.z, dir.x) * Mathf.Rad2Deg;
+			dir = paperball.transform.position - transform.position;
+			paperballAngle = Mathf.Atan2 (dir.z, dir.x) * Mathf.Rad2Deg;
+			dir = fishbone.transform.position - transform.position;
+			fishboneAngle = Mathf.Atan2 (dir.z, dir.x) * Mathf.Rad2Deg;
+		}
     }
 
     private void setObjectAngles()

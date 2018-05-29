@@ -34,8 +34,8 @@ public class BikeData : MonoBehaviour {
 	public float bustedDuration = 5f;
 
 	// Garbage
-	public bool[] garbageOwned = new bool[4];
-	public PhotonView[] gargabePV = new PhotonView[4];
+	//public bool[] garbageOwned = new bool[4];
+	//public PhotonView[] gargabePV = new PhotonView[4];
 
 	public bool host;
 

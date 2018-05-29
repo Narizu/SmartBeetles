@@ -5154,8 +5154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   go: {fileID: 1263707853066866, guid: 5421fb89eb39e4da8bab1e396166bf86, type: 2}
-  image: {fileID: 114858001327304184, guid: 7eb2543af2b91420587dfe553ed0e2de, type: 2}
   text: {fileID: 114213956630095118, guid: 5421fb89eb39e4da8bab1e396166bf86, type: 2}
+  image: {fileID: 114858001327304184, guid: 7eb2543af2b91420587dfe553ed0e2de, type: 2}
 --- !u!1 &807693949
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,7 +5586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -54.999817, y: -56.827087}
+  m_AnchoredPosition: {x: -54.999756, y: -56.82715}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &823457529
@@ -14737,7 +14737,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1714174659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a40df09e544337a4b94ca04b7bb7baeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f90c678d83fc4131a1b363fdfbb0933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debug: {fileID: 1603880232}

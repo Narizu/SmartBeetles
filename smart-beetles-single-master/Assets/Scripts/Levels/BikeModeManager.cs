@@ -11,9 +11,9 @@ public class BikeModeManager : PunBehaviour {
 	public Text score;
 	public GameObject points;
 	private List<Transform> spawnPoints;
-	public List<GameObject> checkPoints;
+	//public List<GameObject> checkPoints;
 	public GameObject currentPac;
-	public Image[] garbageUI;
+	//public Image[] garbageUI;
 	public Transform startPoint;
 	public GameObject waitingUI;
 
@@ -35,8 +35,8 @@ public class BikeModeManager : PunBehaviour {
 	public int maxBusted;
 
 	// Garbage
-	public GameObject[] garbage = new GameObject[4];
-	public Checkpoint[] garbageScripts = new Checkpoint[4];
+	//public GameObject[] garbage = new GameObject[4];
+	//public Checkpoint[] garbageScripts = new Checkpoint[4];
 
 	private void Start()
 	{
@@ -46,7 +46,7 @@ public class BikeModeManager : PunBehaviour {
 		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 		pacLevel = GetComponent<IPacmanLevelManager>();
 		spawnPoints = new List<Transform>();
-		checkPoints = new List<GameObject>();
+		//checkPoints = new List<GameObject>();
 		foreach (Transform point in points.GetComponentsInChildren<Transform>())
 			if (point.tag == "SpawnPoint")
 				spawnPoints.Add(point);
@@ -103,7 +103,7 @@ public class BikeModeManager : PunBehaviour {
 		currentPac = sphere;
 		if (pacData.host) {
 			fillWithAI();
-			spawnCheckpoints();
+			//spawnCheckpoints();
 		}
 	}
 
@@ -149,7 +149,7 @@ public class BikeModeManager : PunBehaviour {
 			sphere.GetComponent<PacmanData>().setPacman(false);
 		}
 	}
-
+	/*
 	public void spawnCheckpoints()
 	{
 		for (int i = 0; i < pacLevel.objectiveProgress(); i++) {
@@ -164,5 +164,5 @@ public class BikeModeManager : PunBehaviour {
 		currentPac.GetComponent<PhotonView>().RPC("removeAllCheckpoints", PhotonTargets.All);
 		spawnCheckpoints();
 	}
-
+	*/
 }
